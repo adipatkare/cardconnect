@@ -1,3 +1,4 @@
+import 'package:cardconnect/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,7 @@ class CardConnect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey,
-        body: Container(),
-
-      ),
+      home: HomeScreen()
     );
   }
 }
