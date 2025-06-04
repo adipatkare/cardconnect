@@ -1,6 +1,10 @@
 # cardconnect
 
-A new Flutter project.
+A Sample assignment Flutter project.
+
+## Screenshots
+![Image](images/Screenshot.png)
+
 
 ## Getting Started
 

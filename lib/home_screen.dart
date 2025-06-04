@@ -10,121 +10,99 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.grey[800],
         title: Text('CardConnect', style: TextStyle(color: Colors.white)),
       ),
-      backgroundColor: Colors.grey,
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
+      backgroundColor: Colors.grey[300],
+      body: Center(
         child: Container(
-          height: 250,
-          width: double.infinity,
-          color: Colors.white,
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 5.0),
-                      child: Icon(
-                        Icons.phone,
-                        color: Colors.grey[800],
-                        size: 20,
-                      ),
-                    ),
-                    Text(
-                      '+91 9*****1938',
-                      style: TextStyle(color: Colors.grey[800]),
-                    ),
-                  ],
-                ),
-                
+          width: 300,
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 10,
+                offset: Offset(2, 4),
               ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+
+              // Row: Phone info
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(Icons.phone, size: 18, color: Colors.grey[700]),
+                  SizedBox(width: 5),
+                  Text('+91 9*****1938', style: TextStyle(color: Colors.grey[800])),
+                ],
+              ),
+
+              SizedBox(height: 10),
+
+              // Row: Profile Image + Info
               Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      height: 100,
-                      width: 100,
-                      child: Image.asset('images/image.png'),
-                    ),
+                  // Profile Picture
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('images/image.png'),
                   ),
+                  SizedBox(width: 16),
+
+                  // User Info
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5, top: 5),
-                        child: Row(
-                          children: [
-                            Icon(Icons.person, size: 20,),
-                            Text("Aditya Patkare",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            ),
-                          ],
+                      Text(
+                        "Aditya Patkare",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5, top: 5),
-                        child: Row(
-                          children: [
-                            Icon(Icons.home, size: 20,),
-                            Text("Freelancer",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            ),
-                          ],
+                      Text(
+                        "Flutter Developer",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey[800],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5, top: 5),
-                        child: Row(
-                          children: [
-                            Icon(Icons.location_city, size: 20,),
-                            Text("Chembur",
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            ),
-                          ],
+                      Text(
+                        "“Building beautiful UIs!”",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey[600],
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 2,
-                      width: 350,
-                      color: Colors.black,
-                    ),
-                  )
-                ],
-              ),
+
+              SizedBox(height: 12),
+
+              Divider(color: Colors.grey[400], thickness: 1),
+
+              SizedBox(height: 10),
+
+              // Social/Contact Icons
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children: [
-                      Icon(Icons.web, size: 20,),
-                      Text("Email",)
+                      Icon(Icons.web, size: 20),
+                      Text("Website", style: TextStyle(fontSize: 12)),
                     ],
                   ),
                   Column(
                     children: [
-                      Icon(Icons.email, size: 20,),
-                      Text("Email",)
+                      Icon(Icons.email, size: 20),
+                      Text("Email", style: TextStyle(fontSize: 12)),
                     ],
                   ),
                 ],
